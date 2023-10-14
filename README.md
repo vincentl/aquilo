@@ -83,6 +83,14 @@ An operation node has the following properties
 
 ## Final Products as Sink Nodes
 
+A node with no outgoing edges in a DAG is called a sink and in a recipe graph the final product is a sink. A sink node has the following properties
+- **type**: sink
+- **uuid**: _F85C5E8B-690F-4E77-96FA-E4DDF4994509_
+- **name**: _Whipped Cream_
+- **input**: [_32DB627B-F311-4FC7-998F-86F382E08F98.uno_]
+- css: _null_
+- description: _enjoy_
+
 ## Grouping Nodes for Streamlined Display
 
 
