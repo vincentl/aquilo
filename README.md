@@ -22,10 +22,11 @@ flowchart LR
 100 grams sugar
  10 grams vanilla extract
 1/8 tsp kosher salt"]
-  C{Combine}
+  C{"Combine
+in bowl"}
   W{"Whip
-<b>until</b>
-thick"}
+with whisk
+until thick"}
   T[Whipped Cream]
   I --> C;
   C --> W;
@@ -68,7 +69,7 @@ There are four ingredients in the whipped cream example in the introduction. The
 
 ## Operations as Internal Nodes
 
-Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a termination condition. Terminate conditions describe when the operation is complete. Part of this specification is a reigstry of available operations and termination conditions. The registry will grow over time to accomodate recipes that cannot be accurately represented using the available operations.
+Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a tool and termination condition. Terminate conditions describe when the operation is complete. Part of this specification is a reigstry of available operations, vessels, tools, and termination conditions. The registry will grow over time to accomodate recipes that cannot be accurately represented using the available operations.
 
 An operation node has the following properties
 - **type**: operation
@@ -77,7 +78,9 @@ An operation node has the following properties
 - **input**: [_5DB4DF97-7096-4002-90D3-1E5BE421898F.uno_]
 - **during**: []
 - **output**: [_uno_]
-- **terminate**: [_when.thick_]
+- **terminate**: [until.thick_]
+- vessel: _null_
+- tool: _whisk_
 - css: _null_
 - description: _vigourously_
 
@@ -93,7 +96,26 @@ A node with no outgoing edges in a DAG is called a sink and in a recipe graph th
 
 ## Grouping Nodes for Streamlined Display
 
+The Whipped Cream example grouped four ingredients into a single node. A group node consists of two or more source nodes, has a single output port, and has the properties
+- **type**: group
+- **uuid**: _4A7D3B86-D3D8-4EB0-8D7E-EDB7DA16DC33_
+- **intput**: [_7B01EB97-A974-48E1-BA13-E482D81ED5ED_, _C33FB5E1-6B19-49E6-81B7-74260E989E5E_]
+- **output**: [uno]
+- css: _null_
+- description: _null_
+
+# Registry of Operation Nodes Properties
+
+## Operation
+
+## Vessel
+
+## Tool
+
+## Termination
+
+# Edges
 
 # YAML as a Common Exchange format for Recipe DAGs
 
-# Registry of Operation Nodes and Properties
+# A Complete Example
