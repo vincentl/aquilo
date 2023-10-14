@@ -36,17 +36,17 @@ until thick"}
   
 # Ingredients and Recipe Steps as Nodes with Properties
 
-A DAG is an abstract concept defined in terms of graph nodes and directed edges. Defining additional structure on a DAG brings the abstract definition into the domain of food recipes. Four node types, each having a list of required and optional properities, enable representing both recipes and hints for formating the recipe for visual display:
+A DAG is an abstract concept defined in terms of graph nodes and directed edges. Defining additional structure on a DAG brings the abstract definition into the domain of food recipes. Four node types, each having a list of required and optional properties, enable representing both recipes and hints for formatting the recipe for visual display:
 - Ingredient Nodes
 - Operation Nodes
-- Final Proudct Nodes
+- Final Product Nodes
 - Grouping Nodes
 
-The following subsections describe each node type and associated properties. A property is a key/value pair used to systematically encode important aspects of the node. For example, every node must have a **uuid** property key with a [RFC4122](https://datatracker.ietf.org/doc/html/rfc4122) Universally Unique IDentifier value and the node may have a **css** property key with a string value encoding a Cascading Style Sheet declarations for formating the node. The uuid is only used to identify the node in a single recipe, so the same ingredient in two different recipes will have different uuid values.
+The following subsections describe each node type and associated properties. A property is a key/value pair used to systematically encode important aspects of the node. For example, every node must have a **uuid** property key with a [RFC4122](https://datatracker.ietf.org/doc/html/rfc4122) Universally Unique IDentifier value and the node may have a **css** property key with a string value encoding a Cascading Style Sheet declarations for formatting the node. The uuid is only used to identify the node in a single recipe, so the same ingredient in two different recipes will have different uuid values.
 
 A node also has **ports** to indicate what flows in and out. An ingredient node will typically have a single **output** port. Operation nodes will have one or more initial **input** ports and usually one **output** port. For operations that require inputs during the operations, such as slowly streaming the ingredient in over time, will have a **during** port. The port name **uno** is used when a port list has a single entry.
 
-An edge is a link between an **output** port and an **input** or **during** port.  Ports in an edge specficiation are named by `uuid.name` for the uuid of the **node** and the port **name** forming one side of the edge.
+An edge is a link between an **output** port and an **input** or **during** port.  Ports in an edge specification are named by `uuid.name` for the uuid of the **node** and the port **name** forming one side of the edge.
 
 In the following sections,
 - a **bold** property key indicates it is required
@@ -74,7 +74,7 @@ There are four ingredients in the whipped cream example in the introduction. The
 
 ## Operations as Internal Nodes
 
-Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a tool and termination condition. Terminate conditions describe when the operation is complete. Part of this specification is a reigstry of available operations, vessels, tools, and termination conditions. The registry will grow over time to accomodate recipes that cannot be accurately represented using the available operations.
+Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a tool and termination condition. Terminate conditions describe when the operation is complete. Part of this specification is a registry of available operations, vessels, tools, and termination conditions. The registry will grow over time to accommodate recipes that cannot be accurately represented using the available operations.
 
 An operation node has the following properties
 - **type**: operation
@@ -87,7 +87,7 @@ An operation node has the following properties
 - vessel: _null_
 - tool: _whisk_
 - css: _null_
-- description: _vigourously_
+- description: _vigorously_
 - yaml: _{version: 1.3.4}_
 
 ### Example Operation with Two Output Ports
