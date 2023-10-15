@@ -35,7 +35,6 @@ until thick"}
   KS --> C;
   C --> W;
   W --> T;
-  style I text-align:left
 ```
 
 # Ingredients and Recipe Steps as Nodes with Properties
