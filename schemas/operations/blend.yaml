@@ -1,10 +1,10 @@
 %YAML 1.2
 ---
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
-$id: 'https://aquilo.schema/operation/combine'
-title: combine
+$id: 'https://aquilo.schema/operation/blend'
+title: blend
 description: |
-  Combine operation that collects multiple inputs into a single vessel
+  Blend operation use a blender to chop, puree, or liquefy
 type: object
 properties:
   kind:
@@ -12,12 +12,12 @@ properties:
   uuid:
     $ref: /uuid
   name:
-    enum: [combine]
+    enum: [blend]
   input:
     type: array
     items:
       type: string
-    minItems: 2
+    minItems: 1
   during:
     type: array
     items:

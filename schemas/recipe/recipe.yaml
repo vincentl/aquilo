@@ -37,22 +37,14 @@ $defs:
           unit:
             type: string
           quantity:
-            type: string
+            type: number
           output:
             type: array
             items:
-              $ref: /uuid
-          ccs:
-            type: [string, 'null']
+              type: string
           description:
             type: [string, 'null']
-          upc:
-            type: [string, 'null']
-          ean:
-            type: [string, 'null']
-          e-number:
-            type: [string, 'null']
-          yaml:
+          data:
             type: [string, 'null']
         required: [kind, uuid, name, unit, quantity, output]
       - type: object
@@ -75,19 +67,19 @@ $defs:
             type: array
             items:
               $ref: /uuid
-          termination:
-            $ref: /termination-condition
           vessel:
             $ref: /vessel
           tool:
             $ref: /tool
-          ccs:
-            type: [string, 'null']
+          intensity:
+            $ref: /intensity
+          termination:
+            $ref: /termination-condition
           description:
             type: [string, 'null']
-          yaml:
+          data:
             type: [string, 'null']
-        required: [kind, uuid, name, input, duration, output, termination, vessel, tool]
+        required: [kind, uuid, name, input, duration, output, vessel, tool, intensity, termination]
       - type: object
         properties:
           kind:
@@ -100,30 +92,11 @@ $defs:
             type: array
             items:
               $ref: /uuid
-          ccs:
-            type: [string, 'null']
           description:
             type: [string, 'null']
-          yaml:
+          data:
             type: [string, 'null']
         required: [kind, uuid, name, input]
-      - type: object
-        properties:
-          kind:
-            enum: [group]
-          uuid:
-            $ref: /uuid
-          nodes:
-            type: array
-            items:
-              $ref: /uuid
-          ccs:
-            type: [string, 'null']
-          description:
-            type: [string, 'null']
-          yaml:
-            type: [string, 'null']
-        required: [kind, uuid, nodes]
   edge:
     $id: /recipe/edge
     type: object
@@ -136,10 +109,8 @@ $defs:
         $ref: /uuid
       destination:
         $ref: /uuid
-      css: 
-        type: [string, 'null']
       description: 
         type: [string, 'null']
-      yaml: 
+      data: 
         type: [string, 'null']
 

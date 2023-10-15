@@ -4,7 +4,65 @@ description: |
   information and ingredients list on a Van Leeuwen pint
   of ice cream.
 source: Vincent Lucarelli
-nodes: []
+nodes:
+  - kind: source
+    uuid: 5A5AEE74-2674-4522-9D99-7173868FCA18
+    name: pistachio kernels
+    unit: gram
+    quantity: 92.5
+    output: [uno]
+  - kind: source
+    uuid: CD5A5BED-AEFF-4DCB-BED4-C71CC79A8270
+    name: sugar
+    unit: gram
+    quantity: 92.5 
+    output: [uno]
+  - kind: source
+    uuid: 97458025-3FB2-4077-B693-D6D1DC7A3C32
+    name: kosher salt
+    unit: gram
+    quantity: 2.3
+    output: [uno]
+  - kind: source
+    uuid: 33A6D9F4-2B62-411C-BC8C-6EF046507E11
+    name: whole milk
+    unit: gram
+    quantity: 100
+    output: [uno]
+  - kind: source
+    uuid: DEAE1727-720D-47C0-8E28-04D46B26A1D6
+    name: sugar
+    unit: gram
+    quantity: 100
+    output: [uno]
+  - kind: source
+    uuid: 333E72A4-BB9B-4A25-8C66-CA4B26668FB4
+    name: whole milk
+    unit: gram
+    quantity: 180
+    output: [uno]
+  - kind: source
+    uuid: 1F83A14D-FEAD-4631-BE90-727987F17B32
+    name: heavy cream
+    unit: gram
+    quantity: 500
+    output: [uno]
+  - kind: source
+    uuid: 4CDB3051-846F-4208-8124-1D45E066E3CD
+    name: egg yolk
+    unit: gram
+    quantity: 115
+    output: [uno]
+  - kind: operation
+    uuid: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF
+    name: blend
+    input: [uno]
+    during: []
+    output: [uno]
+    vessel: container
+    tool: Vitamix
+    intensity: null
+    terminate: null
 edges:
   - kind: edge
     uuid: 6CCC016C-389A-458B-8EC5-F9C24A48A72C
