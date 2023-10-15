@@ -1,0 +1,145 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/recipe'
+title: Aquilo Recipe DAG schema
+type: object
+properties:
+  title:
+    type: string
+    description: descriptive title for the recipe
+  descripton:
+    type: string
+    description: optional detailed description of the recipe
+  source:
+    type: string
+    description: optional information describing the origin of the recipe
+  nodes:
+    type: array
+    items:
+      $ref: /recipe/node
+  edges:
+    type: array
+    items:
+      $ref: /recipe/edge
+$defs:
+  node:
+    $id: /recipe/node
+    oneOf:
+      - type: object
+        properties:
+          kind:
+            enum: [source]
+          uuid:
+            $ref: /uuid
+          name:
+            type: string
+          unit:
+            type: string
+          quantity:
+            type: string
+          output:
+            type: array
+            items:
+              $ref: /uuid
+          ccs:
+            type: [string, 'null']
+          description:
+            type: [string, 'null']
+          upc:
+            type: [string, 'null']
+          ean:
+            type: [string, 'null']
+          e-number:
+            type: [string, 'null']
+          yaml:
+            type: [string, 'null']
+        required: [kind, uuid, name, unit, quantity, output]
+      - type: object
+        properties:
+          kind:
+            enum: [operation]
+          uuid:
+            $ref: /uuid
+          name:
+            type: string
+          input:
+            type: array
+            items:
+              $ref: /uuid
+          during:
+            type: array
+            items:
+              $ref: /uuid
+          output:
+            type: array
+            items:
+              $ref: /uuid
+          termination:
+            $ref: /termination-condition
+          vessel:
+            $ref: /vessel
+          tool:
+            $ref: /tool
+          ccs:
+            type: [string, 'null']
+          description:
+            type: [string, 'null']
+          yaml:
+            type: [string, 'null']
+        required: [kind, uuid, name, input, duration, output, termination, vessel, tool]
+      - type: object
+        properties:
+          kind:
+            enum: [sink]
+          uuid:
+            $ref: /uuid
+          name:
+            type: string
+          input:
+            type: array
+            items:
+              $ref: /uuid
+          ccs:
+            type: [string, 'null']
+          description:
+            type: [string, 'null']
+          yaml:
+            type: [string, 'null']
+        required: [kind, uuid, name, input]
+      - type: object
+        properties:
+          kind:
+            enum: [group]
+          uuid:
+            $ref: /uuid
+          nodes:
+            type: array
+            items:
+              $ref: /uuid
+          ccs:
+            type: [string, 'null']
+          description:
+            type: [string, 'null']
+          yaml:
+            type: [string, 'null']
+        required: [kind, uuid, nodes]
+  edge:
+    $id: /recipe/edge
+    type: object
+    properties:
+      kind:
+        enum: [edge]
+      uuid:
+        $ref: /uuid
+      source:
+        $ref: /uuid
+      destination:
+        $ref: /uuid
+      css: 
+        type: [string, 'null']
+      description: 
+        type: [string, 'null']
+      yaml: 
+        type: [string, 'null']
+

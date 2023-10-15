@@ -1,0 +1,14 @@
+title: Pistacio
+description: |
+  A pistachio ice cream recipe derived from nutritional
+  information and ingredients list on a Van Leeuwen pint
+  of ice cream.
+source: Vincent Lucarelli
+nodes: []
+edges:
+  - kind: edge
+    uuid: 6CCC016C-389A-458B-8EC5-F9C24A48A72C
+    source: C3624570-ECF4-4302-9E37-90AC2BE5B6B6.uno
+    destination: 0BA27AC2-244E-47D5-93E7-755C1A95DDEE.uno
+
+

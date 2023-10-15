@@ -1,0 +1,47 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/operation/combine'
+title: combine
+description: |
+  Combine operation that collects multiple inputs into a single vessel
+type: object
+properties:
+  kind:
+    type: string
+    pattern: ^operation$
+  uuid:
+    $ref: /uuid
+  name:
+    type: string
+    pattern: ^combine$
+  input:
+    type: array
+    items:
+      type: string
+    minItems: 2
+  during:
+    type: array
+    items:
+      type: string
+    maxItems: 0
+  output:
+    type: array
+    items:
+      type: string
+      pattern: ^uno$
+    maxItems: 1 
+  terminate:
+    $ref: '/termination-condition'
+  vessel:
+    $ref: '/vessel'
+  tool:
+    $ref: '/tool'
+  css:
+    type: [string, 'null']
+  description:
+    type: [string, 'null']
+  yaml:
+    type: [string, 'null']
+required: [kind, uuid, name, input, during, output, terminate, vessel, tool]
+

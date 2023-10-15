@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/termination-condition'
+title: set of Aquilo termination condition
+anyOf:
+  - type: 'null'
+    description: null is used when no termination condition is needed
+  - type: object
+    description: a length of time
+    properties:
+      duration:
+        type: object
+        properties:
+          unit:
+            enum: [second, minute, hour]
+          length:
+            type: number
