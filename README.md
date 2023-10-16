@@ -56,8 +56,6 @@ In the following sections,
 - a _italic_ property value indicates it is an example of the value and will likely be different in an actual recipe DAG
 - a normal text property value is the specific value for the node kind
 
-To allow for specific applications to attach additional properties or metadata to a node or edge, the **yaml** key is optional with a valid YAML encoded data.
-
 ## Ingredients as Source Nodes
 
 An ingredient node represents a single item and has the following properties
