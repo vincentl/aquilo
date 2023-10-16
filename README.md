@@ -187,7 +187,7 @@ YAML is a convenient format to encode the collection of nodes and edges for a re
 
 # A Complete Example
 
-See [Pistachio Ice Cream](examples/pistachio.yaml) for a complete example of a Aquilo Recipe DAG.
+See [Pistachio Ice Cream](examples/pistachio.yaml) for a complete example of a Aquilo Recipe DAG. The following diagram is a basic representation of the Pistachio Ice Cream DAG example.
 
 ```mermaid
 %%{
