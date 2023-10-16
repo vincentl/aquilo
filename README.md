@@ -39,11 +39,10 @@ until thick"}
 
 # Ingredients and Recipe Steps as Nodes with Properties
 
-A DAG is an abstract concept defined in terms of graph nodes and directed edges. Defining additional structure on a DAG brings the abstract definition into the domain of food recipes. Four node kinds, each having a list of required and optional properties, enable representing both recipes and hints for formatting the recipe for visual display:
+A DAG is an abstract concept defined in terms of graph nodes and directed edges. Defining additional structure on a DAG brings the abstract definition into the domain of food recipes. Three node kinds, each having a list of required and optional properties, enable representing both recipes and hints for formatting the recipe for visual display:
 - Ingredient Nodes
 - Operation Nodes
 - Final Product Nodes
-- Grouping Nodes
 
 The following subsections describe each node kind and associated properties. A property is a key/value pair used to systematically encode important aspects of the node. For example, every node must have a **uuid** property key with a [RFC4122](https://datatracker.ietf.org/doc/html/rfc4122) Universally Unique IDentifier value and the node may have a **data** property key with a string value that encodes editor or display application specific information. The uuid is only used to identify the node in a single recipe, so the same ingredient in two different recipes will have different uuid values.
 
