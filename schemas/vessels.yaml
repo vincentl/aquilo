@@ -7,5 +7,6 @@ oneOf:
   - type: 'null'
     description: null is used when no vessel is needed
   - enum: [container]
-    description: used for storage or part of tool (ex blender)
-
+    description: holds ingredients, may be part of tool (ex blender)
+  - enum: [storage container]
+    description: covered container for storage 

@@ -59,7 +59,7 @@ $defs:
           input:
             type: array
             items:
-              $ref: /uuid
+              enum: [uno]
           description:
             type: [string, 'null']
           data:

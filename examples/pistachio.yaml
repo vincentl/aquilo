@@ -93,6 +93,33 @@ nodes:
         unit: Fahrenheit
         magnitude: 170
     description: about 6 minutes
+  - kind: operation
+    uuid: 64976832-4252-4E68-AE98-B94F991C21C2
+    name: refrigerate
+    input: [uno]
+    during: []
+    output: [uno]
+    vessel: storage container
+    tool: null
+    intensity: null
+    terminate:
+      duration:
+        unit: hour
+        magnitude: 12
+  - kind: operation
+    uuid: BCE84B42-BCF4-4B8C-A2A7-CD04D6E6BC68
+    name: churn
+    input: [uno]
+    during: []
+    output: [uno]
+    vessel: null
+    tool: ice cream maker
+    intensity: null
+    terminate: null
+  - kind: sink
+    uuid: F0C71ADE-2095-4E85-8694-8F2F7D73F24F
+    name: pistachio ice cream
+    input: [uno]
 edges:
   - kind: edge
     uuid: F36B404C-1E68-4816-81AD-794B84119964
@@ -134,5 +161,16 @@ edges:
     uuid: E76B1693-B959-42E7-B39E-E98C12F31BBA
     source: 4D7FC487-087C-4168-9D45-097E6CDC73AD.output.uno
     destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
-
+  - kind: edge
+    uuid: F984497E-A617-4656-B6A5-61287F370F4E
+    source: 28A01659-9C3D-4DC8-92FD-544A200D00BB.output.uno
+    destination: 64976832-4252-4E68-AE98-B94F991C21C2.input.uno
+  - kind: edge
+    uuid: 28AD8B33-7682-4718-B688-BEBB2451A968
+    source: 64976832-4252-4E68-AE98-B94F991C21C2.output.uno
+    destination: BCE84B42-BCF4-4B8C-A2A7-CD04D6E6BC68.input.uno
+  - kind: edge
+    uuid: 0E744BB1-8304-4198-8284-A847A2F104DB
+    source: BCE84B42-BCF4-4B8C-A2A7-CD04D6E6BC68.output.uno
+    destination: F0C71ADE-2095-4E85-8694-8F2F7D73F24F.input.uno
 

@@ -1,0 +1,44 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/operation/churn'
+title: churn
+description: |
+  Churn agitates a liquid to create butter or ice cream
+type: object
+properties:
+  kind:
+    enum: [operation]
+  uuid:
+    $ref: /uuid
+  name:
+    enum: [churn]
+  input:
+    type: array
+    items:
+      type: string
+    minItems: 1
+  during:
+    type: array
+    items:
+      type: string
+    maxItems: 0
+  output:
+    type: array
+    items:
+      enum: [uno]
+    maxItems: 1 
+  vessel:
+    $ref: '/vessel'
+  tool:
+    $ref: '/tool'
+  intensity:
+    $ref: '/intensity'
+  terminate:
+    $ref: '/terminate-condition'
+  description:
+    type: [string, 'null']
+  data:
+    type: [string, 'null']
+required: [kind, uuid, name, input, during, output, vessel, tool, intensity, terminate]
+

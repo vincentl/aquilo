@@ -6,5 +6,7 @@ title: set of Aquilo tools
 oneOf:
   - type: 'null'
     description: null is used when no tool is needed
+  - enum: [ice cream maker]
+    description: machine used to make ice cream
   - enum: [Vitamix]
     description: a high speed blender

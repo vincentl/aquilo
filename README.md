@@ -244,14 +244,14 @@ to 170°F"]
   H --> B2;
   E --> B2;
 
-  Chill["chill
-in covered container
+  Chill["refrigerate
+in storage container
 for 12 hours"]
 
   B2 --> Chill;
 
   Churn["churn
-using ice cream machine"]
+using ice cream maker"]
 
   Chill --> Churn;
 
