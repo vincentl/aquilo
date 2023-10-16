@@ -244,6 +244,21 @@ to 170°F"]
   H --> B2;
   E --> B2;
 
+  Chill["chill
+in covered container
+for 12 hours"]
+
+  B2 --> Chill;
+
+  Churn["churn
+using ice cream machine"]
+
+  Chill --> Churn;
+
+  Product[pistachio ice cream]
+
+  Churn --> Product;
+
 ```
 
 # Validating a Recipe
