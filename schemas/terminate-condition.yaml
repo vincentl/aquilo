@@ -14,5 +14,19 @@ oneOf:
         properties:
           unit:
             enum: [second, minute, hour]
-          length:
+          magnitude:
             type: number
+        required: [unit, magnitude]
+    required: [duration]
+  - type: object
+    description: target temperature
+    properties:
+      temperature:
+        type: object
+        properties:
+          unit:
+            enum: [Celsius, Fahrenheit]
+          magnitude:
+            type: number
+        required: [unit, magnitude]
+    required: [temperature]

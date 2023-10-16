@@ -65,7 +65,7 @@ nodes:
     terminate:
       duration:
         unit: second
-        length: 30
+        magnitude: 30
   - kind: operation
     uuid: 4D7FC487-087C-4168-9D45-097E6CDC73AD
     name: blend
@@ -78,7 +78,21 @@ nodes:
     terminate:
       duration:
         unit: second
-        length: 60
+        magnitude: 60
+  - kind: operation
+    uuid: 28A01659-9C3D-4DC8-92FD-544A200D00BB
+    name: blend
+    input: [uno]
+    during: []
+    output: [uno]
+    vessel: container
+    tool: Vitamix
+    intensity: high
+    terminate:
+      temperature:
+        unit: Fahrenheit
+        magnitude: 170
+    description: about 6 minutes
 edges:
   - kind: edge
     uuid: F36B404C-1E68-4816-81AD-794B84119964
@@ -100,19 +114,25 @@ edges:
     uuid: D6DD35C1-4A23-42D8-9400-4E94E3E59065
     source: 33A6D9F4-2B62-411C-BC8C-6EF046507E11.output.uno
     destination: 4D7FC487-087C-4168-9D45-097E6CDC73AD.input.uno
-      #  - kind: edge
-      #    uuid: 261E62DA-5D63-4339-9A02-C73AC876003E
-      #    source:
-      #    destination:
-      #
-      #E9C88E0B-6806-472B-B1DA-308F1019664E
-      #C7C3C35A-57E8-4DEA-95DA-9D52D16D7A30
-      #404E7FE4-EE72-4EE5-91D8-148175B13CD4
-      #F5B48BFD-000F-4F8D-B0E3-C9018B357CD6
-      #06B86DB5-D953-4A0F-8FEF-2879ADE38DEA
-      #F401ACE5-55F8-4FF8-9D73-F423BB4C05D4
-      #615C79FC-990F-4C51-A9F1-A87A652FBFD4
-      #E64F6C8D-A29C-4A37-BFC1-E857DF6E9477
-      #B5FBA285-D703-49C5-A8C0-479C5D195458
-      #81FECD85-F6CD-43B3-9A8D-C2835AA96FAC
-      #
+  - kind: edge
+    uuid: 576CCACD-8500-4560-A6B9-A117A5427578
+    source: DEAE1727-720D-47C0-8E28-04D46B26A1D6.output.uno
+    destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
+  - kind: edge
+    uuid: CBD54035-95D0-4765-A0F4-25EAE442F68D
+    source: 333E72A4-BB9B-4A25-8C66-CA4B26668FB4.output.uno
+    destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
+  - kind: edge
+    uuid: 126DB1BA-B041-4F21-942B-8A82E4F5B751
+    source: 1F83A14D-FEAD-4631-BE90-727987F17B32.output.uno
+    destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
+  - kind: edge
+    uuid: 441BD52D-0A1F-4298-960B-7013EC581D50
+    source: 4CDB3051-846F-4208-8124-1D45E066E3CD.output.uno
+    destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
+  - kind: edge
+    uuid: E76B1693-B959-42E7-B39E-E98C12F31BBA
+    source: 4D7FC487-087C-4168-9D45-097E6CDC73AD.output.uno
+    destination: 28A01659-9C3D-4DC8-92FD-544A200D00BB.input.uno
+
+

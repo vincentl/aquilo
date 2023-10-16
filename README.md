@@ -216,7 +216,7 @@ for 30 seconds"]
   S0 --> B0;
   S --> B0;
 
-  M[100 grams whole milk]
+  M0[100 grams whole milk]
 
   B1["blend
 in container
@@ -225,7 +225,25 @@ on high
 for 60 seconds"]
 
   B0 --> B1;
-  M --> B1;
+  M0 --> B1;
+
+  S1[100 grams sugar]
+  M1[180 grams whole milk]
+  H[500 grams heavy cream]
+  E[115 grams egg yolk]
+
+  B2["blend
+in container
+using Vitamix
+on high
+to 170°F"]
+
+  B1 --> B2;
+  S1 --> B2;
+  M1 --> B2;
+  H --> B2;
+  E --> B2;
+
 ```
 
 # Validating a Recipe
