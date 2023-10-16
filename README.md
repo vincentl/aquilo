@@ -48,7 +48,7 @@ The following subsections describe each node kind and associated properties. A p
 
 A node also has **ports** to indicate what flows in and out. An ingredient node will typically have a single **output** port. Operation nodes will have one or more initial **input** ports and usually one **output** port. For operations that require inputs during the operations, such as slowly streaming the ingredient in over time, will have a **during** port. The port name **uno** is used when a port list has a single entry.
 
-An edge is a link between an **output** port and an **input** or **during** port.  Ports in an edge specification are named by `uuid.name` for the uuid of the **node** and the port **name** forming one side of the edge.
+An edge is a link between an **output** port and an **input** or **during** port.  Ports in an edge specification are named by `uuid.type.name` with the uuid of the **node**, type one of `input`, `during`, or `output`,  and the port **name** forming one side of the edge.
 
 In the following sections,
 - a **bold** property key indicates it is required
@@ -128,7 +128,7 @@ A node with no outgoing edges in a DAG is called a sink and in a recipe graph th
 - **kind**: sink
 - **uuid**: _F85C5E8B-690F-4E77-96FA-E4DDF4994509_
 - **name**: _Whipped Cream_
-- **input**: [_32DB627B-F311-4FC7-998F-86F382E08F98.uno_]
+- **input**: [_uno_]
 - description: _enjoy_
 - data: _null_
 
