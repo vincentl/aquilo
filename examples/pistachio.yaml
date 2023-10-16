@@ -66,6 +66,19 @@ nodes:
       duration:
         unit: second
         length: 30
+  - kind: operation
+    uuid: 4D7FC487-087C-4168-9D45-097E6CDC73AD
+    name: blend
+    input: [uno]
+    during: []
+    output: [uno]
+    vessel: container
+    tool: Vitamix
+    intensity: high
+    terminate:
+      duration:
+        unit: second
+        length: 60
 edges:
   - kind: edge
     uuid: F36B404C-1E68-4816-81AD-794B84119964
@@ -79,10 +92,14 @@ edges:
     uuid: 43D33A82-10D3-44CD-9D7F-6990853F4D8B
     source: 97458025-3FB2-4077-B693-D6D1DC7A3C32.output.uno
     destination: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF.input.uno
-      #  - kind: edge
-      #    uuid: 951DC740-0F54-499B-B264-96128F5BD9E2
-      #    source:
-      #    destination:
+  - kind: edge
+    uuid: 951DC740-0F54-499B-B264-96128F5BD9E2
+    source: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF.output.uno
+    destination: 4D7FC487-087C-4168-9D45-097E6CDC73AD.input.uno
+  - kind: edge
+    uuid: D6DD35C1-4A23-42D8-9400-4E94E3E59065
+    source: 33A6D9F4-2B62-411C-BC8C-6EF046507E11.output.uno
+    destination: 4D7FC487-087C-4168-9D45-097E6CDC73AD.input.uno
       #  - kind: edge
       #    uuid: 261E62DA-5D63-4339-9A02-C73AC876003E
       #    source:

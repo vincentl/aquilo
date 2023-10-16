@@ -201,7 +201,7 @@ See [Pistachio Ice Cream](examples/pistachio.yaml) for a complete example of a A
     }
   }
 }%%
-flowchart LR
+flowchart TB
   P[92.5 grams pistachio kernels]
   S0[92.5 grams sugar]
   S[2.3 grams kosher salt]
@@ -215,6 +215,17 @@ for 30 seconds"]
   P --> B0;
   S0 --> B0;
   S --> B0;
+
+  M[100 grams whole milk]
+
+  B1["blend
+in container
+using Vitamix
+on high
+for 60 seconds"]
+
+  B0 --> B1;
+  M --> B1;
 ```
 
 # Validating a Recipe
