@@ -35,7 +35,7 @@ properties:
   intensity:
     $ref: '/intensity'
   terminate:
-    $ref: '/termination-condition'
+    $ref: '/terminate-condition'
   description:
     type: [string, 'null']
   data:

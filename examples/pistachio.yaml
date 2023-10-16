@@ -61,12 +61,41 @@ nodes:
     output: [uno]
     vessel: container
     tool: Vitamix
-    intensity: null
-    terminate: null
+    intensity: high
+    terminate:
+      duration:
+        unit: second
+        length: 30
 edges:
   - kind: edge
-    uuid: 6CCC016C-389A-458B-8EC5-F9C24A48A72C
-    source: C3624570-ECF4-4302-9E37-90AC2BE5B6B6.uno
-    destination: 0BA27AC2-244E-47D5-93E7-755C1A95DDEE.uno
-
-
+    uuid: F36B404C-1E68-4816-81AD-794B84119964
+    source: 5A5AEE74-2674-4522-9D99-7173868FCA18.output.uno
+    destination: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF.input.uno
+  - kind: edge
+    uuid: 2C0D08DC-3EE0-4A04-A8B5-58E813ABFA73
+    source: CD5A5BED-AEFF-4DCB-BED4-C71CC79A8270.input.uno
+    destination: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF.input.uno
+  - kind: edge
+    uuid: 43D33A82-10D3-44CD-9D7F-6990853F4D8B
+    source: 97458025-3FB2-4077-B693-D6D1DC7A3C32.output.uno
+    destination: 7E7B25F6-3D48-468C-9FFD-0F9B3CB9FEBF.input.uno
+      #  - kind: edge
+      #    uuid: 951DC740-0F54-499B-B264-96128F5BD9E2
+      #    source:
+      #    destination:
+      #  - kind: edge
+      #    uuid: 261E62DA-5D63-4339-9A02-C73AC876003E
+      #    source:
+      #    destination:
+      #
+      #E9C88E0B-6806-472B-B1DA-308F1019664E
+      #C7C3C35A-57E8-4DEA-95DA-9D52D16D7A30
+      #404E7FE4-EE72-4EE5-91D8-148175B13CD4
+      #F5B48BFD-000F-4F8D-B0E3-C9018B357CD6
+      #06B86DB5-D953-4A0F-8FEF-2879ADE38DEA
+      #F401ACE5-55F8-4FF8-9D73-F423BB4C05D4
+      #615C79FC-990F-4C51-A9F1-A87A652FBFD4
+      #E64F6C8D-A29C-4A37-BFC1-E857DF6E9477
+      #B5FBA285-D703-49C5-A8C0-479C5D195458
+      #81FECD85-F6CD-43B3-9A8D-C2835AA96FAC
+      #

@@ -3,7 +3,7 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
 $id: 'https://aquilo.schema/intensity'
 title: set of Aquilo intensity modifiers
-anyOf:
+oneOf:
   - type: 'null'
     description: null is used when no intensity is needed
   - enum: [low, medium, high]

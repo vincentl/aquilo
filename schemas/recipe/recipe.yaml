@@ -47,39 +47,7 @@ $defs:
           data:
             type: [string, 'null']
         required: [kind, uuid, name, unit, quantity, output]
-      - type: object
-        properties:
-          kind:
-            enum: [operation]
-          uuid:
-            $ref: /uuid
-          name:
-            type: string
-          input:
-            type: array
-            items:
-              $ref: /uuid
-          during:
-            type: array
-            items:
-              $ref: /uuid
-          output:
-            type: array
-            items:
-              $ref: /uuid
-          vessel:
-            $ref: /vessel
-          tool:
-            $ref: /tool
-          intensity:
-            $ref: /intensity
-          termination:
-            $ref: /termination-condition
-          description:
-            type: [string, 'null']
-          data:
-            type: [string, 'null']
-        required: [kind, uuid, name, input, duration, output, vessel, tool, intensity, termination]
+      - $ref: /operation
       - type: object
         properties:
           kind:

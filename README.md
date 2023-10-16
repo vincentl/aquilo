@@ -73,7 +73,7 @@ An ingredient node represents a single item and has the following properties
 
 ## Operations as Internal Nodes
 
-Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a tool and termination condition. Terminate conditions describe when the operation is complete. Part of this specification is a registry of available operations, vessels, tools, intensity, and termination conditions. The registry will grow over time to accommodate recipes that cannot be accurately represented using the available operations.
+Combine and Whip are two operations in the whipped cream example. Combine simple means to group the ingredients together into a common vessel, but Whip requires a tool and terminate condition. Terminate conditions describe when the operation is complete. Part of this specification is a registry of available operations, vessels, tools, intensity, and terminate conditions. The registry will grow over time to accommodate recipes that cannot be accurately represented using the available operations.
 
 An operation node has the following properties
 - **kind**: operation
@@ -121,7 +121,7 @@ flowchart LR
 - **intensity**: _null_
 - **terminate**: _null_
 
-The ports `82C766EB-43C4-4E6E-8C22-5676387E0E12.yolk` and `82C766EB-43C4-4E6E-8C22-5676387E0E12.white` distinguish the two outputs from this example separation operation.
+The ports `82C766EB-43C4-4E6E-8C22-5676387E0E12.output.yolk` and `82C766EB-43C4-4E6E-8C22-5676387E0E12.output.white` distinguish the two outputs from this example separation operation.
 
 ## Final Products as Sink Nodes
 
@@ -168,8 +168,8 @@ until thick"}
 A directed edge is an arrow from an **output** port to an **input** or **during** port of a different node with properties
 - **kind**: edge
 - **uuid**: _40A45365-CA92-4E0B-A865-35A89F0D9FB2_
-- **source**: _F3274656-E756-46DC-B083-814225BBBE40.uno_
-- **destination**: _2305DE0D-7255-4EAB-AD29-D5FC11F236C1.uno_
+- **source**: _F3274656-E756-46DC-B083-814225BBBE40.output.uno_
+- **destination**: _2305DE0D-7255-4EAB-AD29-D5FC11F236C1.input.uno_
 - description: _null_
 - data: _null_
 
@@ -182,7 +182,7 @@ One aspect of the project **Aquilo** is to gather a concise list of operation no
 - [Vessels](schemas/vessels.yaml) registry is the list of valid vessels to hold ingredients and intermediate mixtures
 - [Tools](schemas/tools.yaml) registry is the list of valid kitchen tools for carrying out operations
 - [Intensities](schemas/intensities.yaml) registry is the list of valid intensity modifiers for an operations, such high, medium, low, or 350°F 
-- [Termination Conditions](schemas/termination-conditions.yaml) registry is the list of valid termination conditions used to indicate when an operation is complete
+- [Terminate Conditions](schemas/terminate-conditions.yaml) registry is the list of valid terminate conditions used to indicate when an operation is complete
 
 # YAML as a Common Exchange format for Recipe DAGs
 
@@ -191,6 +191,31 @@ YAML is a convenient format to encode the collection of nodes and edges for a re
 # A Complete Example
 
 See [Pistachio Ice Cream](examples/pistachio.yaml) for a complete example of a Aquilo Recipe DAG.
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontFamily': 'monospace'
+    }
+  }
+}%%
+flowchart LR
+  P[92.5 grams pistachio kernels]
+  S0[92.5 grams sugar]
+  S[2.3 grams kosher salt]
+
+  B0["blend
+in container
+using Vitamix
+on high
+for 30 seconds"]
+
+  P --> B0;
+  S0 --> B0;
+  S --> B0;
+```
 
 # Validating a Recipe
 

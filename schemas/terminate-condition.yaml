@@ -1,11 +1,11 @@
 %YAML 1.2
 ---
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
-$id: 'https://aquilo.schema/termination-condition'
-title: set of Aquilo termination condition
-anyOf:
+$id: 'https://aquilo.schema/terminate-condition'
+title: set of Aquilo terminate condition
+oneOf:
   - type: 'null'
-    description: null is used when no termination condition is needed
+    description: null is used when no terminate condition is needed
   - type: object
     description: a length of time
     properties:

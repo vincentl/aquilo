@@ -3,7 +3,9 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
 $id: 'https://aquilo.schema/vessel'
 title: set of Aquilo vessels
-anyOf:
+oneOf:
   - type: 'null'
     description: null is used when no vessel is needed
+  - enum: [container]
+    description: used for storage or part of tool (ex blender)
 

@@ -3,7 +3,8 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
 $id: 'https://aquilo.schema/tool'
 title: set of Aquilo tools
-anyOf:
+oneOf:
   - type: 'null'
     description: null is used when no tool is needed
-
+  - enum: [Vitamix]
+    description: a high speed blender
