@@ -1,4 +1,4 @@
-![Image of Roman god Aquilo in the style of Frank Lloyd Wright](https://github.com/vincentl/aquilo/blob/main/assets/Aquilo-1024.jpg)
+![Image of Roman god Aquilo in the style of Frank Lloyd Wright](https://github.com/vincentl/aquilo/blob/main/assets/Aquilo-512.jpeg)
 
 # Aquilo
 
