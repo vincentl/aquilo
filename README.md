@@ -58,7 +58,7 @@ In the following sections,
 
 ### Translatable Strings
 
-The Aquillo framework is written in English, but the aim is to support displaying recipes in multiple languages. Display strings in node and edge specifications are written in English with a standard way to indicate translations to other languages. Translatable strings use a `language_REGION` key tag the string, where `language` is the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (or [ISO 639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) if an 639-1 code does not exist) and `REGION` is the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) code for the region.  For example, a recipe title is translatable, so the title is a mapping:
+The Aquilo framework is written in English, but the aim is to support displaying recipes in multiple languages. Display strings in node and edge specifications are written in English with a standard way to indicate translations to other languages. Translatable strings use a `language_REGION` key tag the string, where `language` is the [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (or [ISO 639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) if an 639-1 code does not exist) and `REGION` is the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) code for the region.  For example, a recipe title is translatable, so the title is a mapping:
 
 ```yaml
 title:
@@ -95,7 +95,7 @@ An operation node has the following properties
 - annotation: {en_US: _vigorously_}
 - data: _null_
 
-The `name` field for an operation is not translatable because Aquillo defines all available operations and the definition of an operation provides the translation strings.
+The `name` field for an operation is not translatable because Aquilo defines all available operations and the definition of an operation provides the translation strings.
 
 ### Example Operation with Two Output Ports
 
@@ -196,7 +196,7 @@ One aspect of the project **Aquilo** is to gather a concise list of operation no
 ### Other Schema Files
 
 - [Localize](schemas/localize.yaml) specifies a translatable string must have an `en_US` entry and allows for translation strings.
-- [Recipe](schemas/recipe/recipe.yaml) specifies the overall format for an Aquillo recipe.
+- [Recipe](schemas/recipe/recipe.yaml) specifies the overall format for an Aquilo recipe.
 - [UUID](schemas/uuid.yaml) specifies the format for `uuid` values.
 
 # YAML as a Common Exchange format for Recipe DAGs
@@ -288,9 +288,9 @@ ajv --spec=draft2020 validate \
   -d examples/pistachio.yaml
 ```
 
-# From Aquillo Recipe YAML to Display
+# From Aquilo Recipe YAML to Display
 
-Processing an Aquillo recipe to produce a pleasing presentation requires determining the position of each node, the geometry of directed edges including the coordinates where the edge leaves one node and enters another node, and most importantly the textual representation of each node. **Source** and **Sink** nodes are relatively simple, but **Operation** nodes are complex with several optional values. Translatable strings must also be processed.
+Processing an Aquilo recipe to produce a pleasing presentation requires determining the position of each node, the geometry of directed edges including the coordinates where the edge leaves one node and enters another node, and most importantly the textual representation of each node. **Source** and **Sink** nodes are relatively simple, but **Operation** nodes are complex with several optional values. Translatable strings must also be processed.
 
 ## _TODO_
 
