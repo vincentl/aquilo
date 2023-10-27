@@ -1,3 +1,5 @@
+![Image of Roman god Aquilo in the style of Frank Lloyd Wright](https://github.com/vincentl/aquilo/blob/main/Aquilo.jpg)
+
 # Aquilo
 
 A project for representing recipes as Directed Acyclic Graphs
@@ -7,7 +9,6 @@ A project for representing recipes as Directed Acyclic Graphs
 A recipe describes how to start with a set of ingredients and apply a sequence of operations to arrive at a final product. A Directed Acyclic Graph (DAG) is a mathematical concept with nodes and directed edges that connect nodes. This project aims to create a specification of nodes and edges to enable concise representation of a recipe as a DAG.
 
 For example, a recipe for whipped cream is represented by the DAG:
-
 
 ```mermaid
 %%{
