@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/vessel/container'
+enum: [container]
+description: holds ingredients, may be part of tool (ex blender)
+default:
+  en_US: container

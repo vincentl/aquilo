@@ -1,0 +1,25 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/terminate-condition/duration'
+description: a length of time
+type: object
+properties:
+  duration:
+    type: object
+    properties:
+      unit:
+        enum: [second, minute, hour]
+      magnitude:
+        type: number
+    required: [unit, magnitude]
+required: [duration]
+default:
+  en_US:
+    duration: duration
+    unit: unit
+    magnitude: magnitude
+    second: second
+    minute: minute
+    hour: hour
+

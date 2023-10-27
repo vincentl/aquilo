@@ -4,7 +4,7 @@ $schema: 'https://json-schema.org/draft/2020-12/schema#'
 $id: 'https://aquilo.schema/operation'
 title: set of Aquilo operations
 oneOf:
-  - $ref: 'operation/blend'
-  - $ref: 'operation/combine'
-  - $ref: 'operation/churn'
-  - $ref: 'operation/refrigerate'
+  - $ref: operation/blend
+  - $ref: operation/combine
+  - $ref: operation/churn
+  - $ref: operation/refrigerate

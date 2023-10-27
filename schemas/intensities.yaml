@@ -8,6 +8,10 @@ oneOf:
     description: null is used when no intensity is needed
   - enum: [low, medium, high]
     description: general modifiers for machine settings
+    default:
+      en_US: {low: low, medium: medium, high: high}
   - enum: [gently, vigourously]
     description: general modifiers for human effort
+    default:
+      en_US: {gently: gently, vigourously: vigourously}
   

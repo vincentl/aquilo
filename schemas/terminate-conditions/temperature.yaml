@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/terminate-condition/temperature'
+type: object
+description: target temperature
+properties:
+  temperature:
+    type: object
+    properties:
+      unit:
+        enum: [Celsius, Fahrenheit]
+      magnitude:
+        type: number
+    required: [unit, magnitude]
+required: [temperature]
+default:
+  en_US:
+    temperature: temperature
+    unit: unit
+    magnitude: magnitude
+    Celsius: Celsius
+    Fahrenheit: Fahrenheit

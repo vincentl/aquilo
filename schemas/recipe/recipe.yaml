@@ -6,13 +6,13 @@ title: Aquilo Recipe DAG schema
 type: object
 properties:
   title:
-    type: string
+    $ref: /localize
     description: descriptive title for the recipe
-  descripton:
-    type: string
-    description: optional detailed description of the recipe
+  annotation:
+    $ref: /localize
+    description: a note of explanation or comment for the recipe
   source:
-    type: string
+    $ref: /localize
     description: optional information describing the origin of the recipe
   nodes:
     type: array
@@ -33,19 +33,19 @@ $defs:
           uuid:
             $ref: /uuid
           name:
-            type: string
+            $ref: /localize
           unit:
-            type: string
+            $ref: /source-unit
           quantity:
             type: number
           output:
             type: array
             items:
               type: string
-          description:
-            type: [string, 'null']
+          annotation:
+            $ref: /localize
           data:
-            type: [string, 'null']
+            type: string
         required: [kind, uuid, name, unit, quantity, output]
       - $ref: /operation
       - type: object
@@ -55,15 +55,15 @@ $defs:
           uuid:
             $ref: /uuid
           name:
-            type: string
+            $ref: /localize
           input:
             type: array
             items:
               enum: [uno]
-          description:
-            type: [string, 'null']
+          annotation:
+            $ref: /localize
           data:
-            type: [string, 'null']
+            type: string
         required: [kind, uuid, name, input]
   edge:
     $id: /recipe/edge
@@ -77,8 +77,8 @@ $defs:
         $ref: /uuid
       destination:
         $ref: /uuid
-      description: 
-        type: [string, 'null']
+      annotation:
+        $ref: /localize
       data: 
-        type: [string, 'null']
+        type: string
 

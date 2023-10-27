@@ -3,6 +3,7 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema#'
 $id: 'https://aquilo.schema/uuid'
 title: uuid
+description: Definition of acceptable UUID strings
 type: string
 pattern: ^[0-9A-Fa-f]{8}(-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}([.](input|output|during).[-_A-Za-z0-9]+)?$
 

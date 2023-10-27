@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+$schema: 'https://json-schema.org/draft/2020-12/schema#'
+$id: 'https://aquilo.schema/localize'
+title: localize
+description: Translatable strings that require an en_US entry
+type: object
+properties:
+  en_US:
+    type: string
+required: [en_US]
+

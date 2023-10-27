@@ -6,7 +6,6 @@ title: set of Aquilo vessels
 oneOf:
   - type: 'null'
     description: null is used when no vessel is needed
-  - enum: [container]
-    description: holds ingredients, may be part of tool (ex blender)
-  - enum: [storage container]
-    description: covered container for storage 
+  - $ref: vessel/container
+  - $ref: vessel/storage-container
+

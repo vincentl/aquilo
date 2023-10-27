@@ -29,16 +29,16 @@ properties:
       enum: [uno]
     maxItems: 1 
   vessel:
-    $ref: '/vessel'
+    $ref: /vessel
   tool:
-    $ref: '/tool'
+    $ref: /tool
   intensity:
-    $ref: '/intensity'
+    $ref: /intensity
   terminate:
-    $ref: '/terminate-condition'
-  description:
-    type: [string, 'null']
+    $ref: /terminate-condition
+  annotation:
+    $ref: /localize
   data:
-    type: [string, 'null']
+    type: string
 required: [kind, uuid, name, input, during, output, vessel, tool, intensity, terminate]
 

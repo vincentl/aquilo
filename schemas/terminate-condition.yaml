@@ -6,27 +6,6 @@ title: set of Aquilo terminate condition
 oneOf:
   - type: 'null'
     description: null is used when no terminate condition is needed
-  - type: object
-    description: a length of time
-    properties:
-      duration:
-        type: object
-        properties:
-          unit:
-            enum: [second, minute, hour]
-          magnitude:
-            type: number
-        required: [unit, magnitude]
-    required: [duration]
-  - type: object
-    description: target temperature
-    properties:
-      temperature:
-        type: object
-        properties:
-          unit:
-            enum: [Celsius, Fahrenheit]
-          magnitude:
-            type: number
-        required: [unit, magnitude]
-    required: [temperature]
+  - $ref: terminate-condition/duration
+  - $ref: terminate-condition/temperature
+
